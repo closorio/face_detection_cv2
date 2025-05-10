@@ -1,6 +1,6 @@
 ## Detección de emociones en tiempo real ##
-## SISTEMAS INTELIGENTES ##
-
+# Este script utiliza un modelo de red neuronal convolucional (CNN) para detectar emociones en tiempo real a partir de un video.
+# El modelo se basa en la arquitectura VGG16 y ha sido entrenado con un conjunto de datos de imágenes faciales etiquetadas con emociones extraidos de FER2013.
 # Import de librerias actualizadas
 from keras.applications.imagenet_utils import preprocess_input
 from keras.utils import img_to_array
@@ -9,6 +9,7 @@ import numpy as np
 import imutils
 import cv2
 import time
+
 
 # Variables para calcular FPS
 time_actualframe = 0
@@ -23,7 +24,7 @@ weightsPath = "face_detector/res10_300x300_ssd_iter_140000.caffemodel"
 faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
 # Carga el detector de clasificación de emociones
-emotionModel = load_model("modelFEC.h5")
+emotionModel = load_model("./models/VGG16/modelFER.h5")
 
 # Se crea la captura de video
 cam = cv2.VideoCapture(0)
