@@ -2,9 +2,9 @@
 # Este script utiliza un modelo de red neuronal convolucional (CNN) para detectar emociones en tiempo real a partir de un video.
 # El modelo se basa en la arquitectura VGG16 y ha sido entrenado con un conjunto de datos de imágenes faciales etiquetadas con emociones extraidos de FER2013.
 # Import de librerias actualizadas
-from keras.applications.imagenet_utils import preprocess_input
-from keras.utils import img_to_array
-from keras.models import load_model
+from tensorflow.keras.applications.imagenet_utils import preprocess_input # type: ignore
+from tensorflow.keras.utils import img_to_array # type: ignore
+from tensorflow.keras.models import load_model # type: ignore
 import numpy as np
 import imutils
 import cv2

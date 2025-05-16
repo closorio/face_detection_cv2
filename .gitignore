@@ -1,3 +1,5 @@
 venv
 .venv
 commits.txt
+emotion_recognition_resnet50v2.keras
+models/**/*.keras
